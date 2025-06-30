@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Quantum Montage: Revolutionizing video editing through machine perception and quantum-inspired visuals. Explore the future of probabilistic editing with Runway AI." name="description"/>
+<meta content="quantum video editing, probabilistic visuals, runway ai, runwayml, runway gen-4, machine perception, quantum montage" name="keywords"/>
+<title>Quantum_Montage</title>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --deep-space-black: #010814;
+        --dark-matter-purple: #1C1C2C;
+        --quantum-blue: #4DEEEA;
+        --particle-green: #74EE15;
+        --radiation-pink: #F000FF;
+        --neutron-gold: #FFE700;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--deep-space-black);
+        color: #ffffff;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Quantum Sans', 'Roboto', sans-serif;
+    }
+    
+    code, pre {
+        font-family: 'Probability Mono', 'Roboto Mono', monospace;
+    }
+    
+    .btn-quantum {
+        background: linear-gradient(45deg, var(--quantum-blue), var(--particle-green));
+        border: none;
+        color: var(--deep-space-black);
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-quantum:hover {
+        box-shadow: 0 0 15px var(--quantum-blue);
+        transform: scale(1.05);
+    }
+    
+    .quantum-bg {
+        background: linear-gradient(135deg, var(--deep-space-black), var(--dark-matter-purple));
+    }
+    
+    .quantum-text {
+        background: linear-gradient(45deg, var(--quantum-blue), var(--particle-green), var(--radiation-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    @keyframes quantumFlicker {
+        0% { opacity: 1; }
+        50% { opacity: 0.7; }
+        100% { opacity: 1; }
+    }
+    
+    .quantum-icon {
+        animation: quantumFlicker 2s infinite;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const quantumElements = document.querySelectorAll('.quantum-element');
+        
+        quantumElements.forEach(element => {
+            element.addEventListener('mouseover', (e) => {
+                e.target.style.transform = 'scale(1.05) rotate(' + (Math.random() * 2 - 1) + 'deg)';
+            });
+            
+            element.addEventListener('mouseout', (e) => {
+                e.target.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    });
+    
+    function quantumTransition(element) {
+        element.style.opacity = 0;
+        setTimeout(() => {
+            element.style.opacity = 1;
+        }, 300);
+    }
+</script>
+<div class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" id="cookie-popup" style="background-color: rgba(1, 8, 20, 0.9); z-index: 9999;">
+<div class="bg-dark p-4 rounded-3" style="max-width: 400px; border: 2px solid #4DEEEA;">
+<h2 class="text-center mb-3" style="font-family: 'Quantum Sans', sans-serif; color: #4DEEEA;">Quantum Cookie Notice</h2>
+<p style="font-family: 'Quantum Sans', sans-serif; color: #F000FF;">We use cookies to enhance your experience in the quantum realm. Do you agree to our use of cookies?</p>
+<div class="d-flex justify-content-center mt-4">
+<button class="btn me-2" id="accept-cookies" style="background-color: #74EE15; color: #010814; font-family: 'Quantum Sans', sans-serif;">Accept</button>
+<button class="btn" id="reject-cookies" style="background-color: #FFE700; color: #010814; font-family: 'Quantum Sans', sans-serif;">Reject</button>
+</div>
+</div>
+</div>
+<style>
+    @keyframes quantumPulse {
+        0% { box-shadow: 0 0 5px #4DEEEA; }
+        50% { box-shadow: 0 0 15px #4DEEEA; }
+        100% { box-shadow: 0 0 5px #4DEEEA; }
+    }
+    #cookie-popup .btn {
+        animation: quantumPulse 2s infinite;
+        transition: transform 0.3s ease;
+    }
+    #cookie-popup .btn:hover {
+        transform: scale(1.05);
+    }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cookiePopup = document.getElementById('cookie-popup');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+
+    function hidePopup() {
+        cookiePopup.style.display = 'none !important';
+        cookiePopup.remove(); // Completely remove from DOM
+    }
+
+    function setCookieChoice(choice) {
+        localStorage.setItem('cookieChoice', choice);
+        hidePopup();
+    }
+
+    if (!localStorage.getItem('cookieChoice')) {
+        cookiePopup.style.display = 'flex';
+    } else {
+        hidePopup();
+    }
+
+    acceptBtn.addEventListener('click', () => setCookieChoice('accepted'));
+    rejectBtn.addEventListener('click', () => setCookieChoice('rejected'));
+});
+</script>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+<div style="flex: 1;">
+<header>
+<div class="container-fluid py-3" style="background-color: #010814;">
+<div class="row align-items-center">
+<div class="col-md-4">
+<a class="text-decoration-none" href="/">
+<h1 class="m-0" style="font-family: 'Quantum Sans', sans-serif; color: #4DEEEA; text-shadow: 0 0 10px #4DEEEA;">
+                    Quantum_Montage
+                </h1>
+</a>
+</div>
+<div class="col-md-8">
+<nav class="navbar navbar-expand-lg navbar-dark">
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link quantum-link" href="posts.html">Posts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link quantum-link" href="about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link quantum-link" href="contacts.html">Contacts</a>
+</li>
+<li class="nav-item">
+<a class="nav-link quantum-link" href="privacy_policy.html">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<style>
+    @font-face {
+        font-family: 'Quantum Sans';
+        src: url('path-to-your-custom-font/quantum-sans.woff2') format('woff2');
+    }
+
+    .quantum-link {
+        font-family: 'Quantum Sans', sans-serif;
+        color: #F000FF !important;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .quantum-link::before {
+        content: attr(href);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #74EE15;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .quantum-link:hover {
+        color: transparent !important;
+    }
+
+    .quantum-link:hover::before {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 991px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            background-color: #010814;
+            padding: 15px;
+            z-index: 1000;
+        }
+    }
+</style>
+<script>
+document.querySelectorAll('.quantum-link').forEach(link => {
+    link.addEventListener('mouseover', () => {
+        const text = link.textContent;
+        const scrambled = text.split('').map(char => 
+            Math.random() > 0.5 ? char : String.fromCharCode(char.charCodeAt(0) + Math.floor(Math.random() * 5))
+        ).join('');
+        link.setAttribute('data-original', text);
+        link.textContent = scrambled;
+    });
+
+    link.addEventListener('mouseout', () => {
+        const original = link.getAttribute('data-original');
+        if (original) {
+            link.textContent = original;
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navbarToggler.addEventListener('click', function() {
+        navbarCollapse.classList.toggle('show');
+    });
+});
+</script>
+</header>
+<div class="container-fluid py-5" style="background-color: #010814; color: #4DEEEA;">
+<div class="row justify-content-center">
+<div class="col-lg-8 col-md-10 col-sm-12">
+<article class="quantum-article">
+<h1 class="mb-4" style="font-family: 'Quantum Sans', sans-serif; color: #F000FF;">Schrödinger's Dataset: Uncertainty in AI Training</h1>
+<div class="quantum-image-container mb-4">
+<img alt="A visual representation of data uncertainty: a blurred, shimmering cloud of data points with some areas in focus and others fading into obscurity, reminiscent of quantum superposition" class="img-fluid" src="images/image_0_posts_3.png" style="border: 2px solid #4DEEEA; border-radius: 10px;"/>
+</div>
+<p class="lead" style="font-family: 'Probability Mono', monospace; color: #74EE15;">
+                    In the quantum realm of AI training, datasets exist in a superposition of certainty and ambiguity. Like Schrödinger's famous cat, the true nature of our data remains uncertain until observed – or in this case, until processedcessed by our modelels.
+                </p>
+<h2 class="mt-5 mb-3" style="font-family: 'Quantum Sans', sans-serif; color: #FFE700;">The Uncertainty Principle of Data</h2>
+<p>
+                    Just as Heisenberg's uncertainty principle states that we cannot simultaneously know the position and momentum of a particle with perfect accuracy, we face similar challenges in AI training. The more precisely we define our dataset, the less generalizable our modelel becomes. Conversely, the more diverse and ambiguous our data, the less certain we can be about its specific representations.
+                </p>
+<h2 class="mt-5 mb-3" style="font-family: 'Quantum Sans', sans-serif; color: #FFE700;">Quantum Superposition of Labels</h2>
+<p>
+                    In the world of quantum video editing and expertbabilistic visuals, we often encounter data that exists in multiple states simultaneously. A frame in a video might be labeled as both "day" and "night" if it captures a twilight scene. This superposition of labels challenges traditional classification apapproachachesods and requires us to think in terms of probabilitybability distributions rather than discrete categories.
+                </p>
+<div class="quantum-image-container my-4">
+<img alt="A split-screen image showing a twilight scene: one half labeled 'day' and the other 'night', with a blurred, overlapping area in the middle representing the uncertainty of classification" class="img-fluid" src="images/image_1_posts_3.png" style="border: 2px solid #4DEEEA; border-radius: 10px;"/>
+</div>
+<h2 class="mt-5 mb-3" style="font-family: 'Quantum Sans', sans-serif; color: #FFE700;">Entanglement of Features</h2>
+<p>
+                    In quantum mechanics, particles can become entangled, with the state of one particle immediately influencing the other, regardless of distance. Similarly, in AI training, features in our dataset can become entangled, creating complex interdependencies that are challenging to unravel. This entanglement can result to unexpected behaviors in our modelels, much like the "spooky action at a distance" that Einstein found so perplexing in quantum theory.
+                </p>
+<h2 class="mt-5 mb-3" style="font-family: 'Quantum Sans', sans-serif; color: #FFE700;">The Observer Effect in Machine Learning</h2>
+<p>
+                    The act of observation in quantum mechanics can change the state of the system being observed. In machine learning, particularly in areas like generative AI used in Runway ML and other quantum video editing tools, we face a similar phenomenon. The procedurecess of training a modelel on a dataset can inadvertently alter our perception of that data, creating a feedback loop that influences future data collection and annotation.
+                </p>
+<h2 class="mt-5 mb-3" style="font-family: 'Quantum Sans', sans-serif; color: #FFE700;">Navigating the Quantum Landscape of AI</h2>
+<p>
+                    As we continue to push the boundaries of AI in fields like advancedbabilistic visuals and quantum video editing, we must embrace the uncertainty inherent in our datasets. By adopting quantum-inspired apadvancedaches to data handling and modelel training, we can create more robust and flexible AI systems capable of navigating the complex, often ambiguous nature of real-world data.
+                </p>
+<p>
+                    The future of AI training lies not in eliminating uncertainty, but in harnessing it – much like quantum computers harness superposition to perform complex calculations. As we refine our techniques and tools, including platforms like Runway AI, we move closer to a paradigm where uncertainty is not a lemulation, but a powerful feature in our quest to edit possibility itself through machine perception.
+                </p>
+</article>
+</div>
+</div>
+</div>
+<style>
+    .quantum-article {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .quantum-article::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(77, 238, 234, 0.1), rgba(240, 0, 255, 0.1));
+        z-index: -1;
+        opacity: 0.5;
+        animation: quantumFluctuation 10s infinite alternate;
+    }
+    
+    @keyframes quantumFluctuation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .quantum-image-container {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .quantum-image-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(120deg, rgba(77, 238, 234, 0.2), rgba(240, 0, 255, 0.2));
+        mix-blend-mode: screen;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .quantum-image-container:hover::after {
+        opacity: 1;
+    }
+    
+    h1, h2 {
+        position: relative;
+        display: inline-block;
+    }
+    
+    h1::after, h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        background: linear-gradient(90deg, #4DEEEA, #F000FF);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    h1:hover::after, h2:hover::after {
+        transform: scaleX(1);
+    }
+</style>
+<script>
+    document.querySelectorAll('.quantum-article p').forEach(p => {
+        p.innerHTML = p.innerHTML.split(' ').map(word => 
+            `<span class="quantum-word">${word}</span>`
+        ).join(' ');
+    });
+
+    document.querySelectorAll('.quantum-word').forEach(word => {
+        word.addEventListener('mouseover', () => {
+            word.style.transform = 'scale(1.1) translateY(-2px)';
+            word.style.color = '#F000FF';
+            word.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        });
+        word.addEventListener('mouseout', () => {
+            word.style.transform = 'scale(1) translateY(0)';
+            word.style.color = '';
+        });
+    });
+</script>
+</div>
+<footer style="width: 100%; z-index: 1000;">
+<footer class="bg-dark text-light py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-3 mb-md-0">
+<h5 class="text-quantum-blue mb-3">Quantum Montage</h5>
+<p class="small">Editing Possibility Itself Through Machine Perception</p>
+<div class="mt-3">
+<a class="text-light me-3" href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+<a class="text-light me-3" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+<a class="text-light me-3" href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+<a class="text-light" href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="col-md-4 mb-3 mb-md-0">
+<h5 class="text-particle-green mb-3">Navigation</h5>
+<ul class="list-unstyled">
+<li><a class="text-light text-decoration-none hover-glow" href="posts.html">Posts</a></li>
+<li><a class="text-light text-decoration-none hover-glow" href="about.html">About</a></li>
+<li><a class="text-light text-decoration-none hover-glow" href="contacts.html">Contacts</a></li>
+<li><a class="text-light text-decoration-none hover-glow" href="privacy_policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5 class="text-radiation-pink mb-3">Contact Us</h5>
+<p class="small">123 Quantum Lane, Quantumbability City, PC 12345</p>
+<p class="small">Phone: (555) 123-4567</p>
+<p class="small">Email: info@quantummontage.com</p>
+</div>
+</div>
+<hr class="my-4 bg-neutron-gold"/>
+<div class="text-center">
+<p class="small mb-0">© 2024 Quantum Montage. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<style>
+    footer {
+        font-family: 'Quantum Sans', sans-serif;
+        background: linear-gradient(to bottom, #010814, #1C1C2C);
+    }
+    .text-quantum-blue { color: #4DEEEA; }
+    .text-particle-green { color: #74EE15; }
+    .text-radiation-pink { color: #F000FF; }
+    .bg-neutron-gold { background-color: #FFE700; }
+    .hover-glow:hover {
+        text-shadow: 0 0 5px currentColor;
+        transition: text-shadow 0.3s ease;
+    }
+</style>
+<script>
+document.querySelectorAll('.hover-glow').forEach(link => {
+    link.addEventListener('mouseover', () => {
+        const letters = link.textContent.split('');
+        link.textContent = '';
+        letters.forEach(letter => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            span.style.display = 'inline-block';
+            span.style.transition = 'transform 0.3s ease';
+            link.appendChild(span);
+        });
+        
+        link.querySelectorAll('span').forEach(span => {
+            span.style.transform = `translateY(${Math.random() * 5 - 2.5}px)`;
+        });
+    });
+
+    link.addEventListener('mouseout', () => {
+        link.textContent = link.textContent;
+    });
+});
+</script>
+</footer>
+</body>
+</html>
